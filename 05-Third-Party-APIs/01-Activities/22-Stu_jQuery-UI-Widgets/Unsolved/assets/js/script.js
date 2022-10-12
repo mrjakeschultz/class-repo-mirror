@@ -1,36 +1,74 @@
-var formEl = $('#skills-form');
-var nameInputEl = $('#skill-name');
-var dateInputEl = $('#datepicker');
-var skillsListEl = $('#skills-list');
+var formEl = $("#skills-form");
+var nameInputEl = $("#skill-name");
+var dateInputEl = $("#datepicker");
+var skillsListEl = $("#skills-list");
 
 var printSkills = function (name, date) {
-  var listEl = $('<li>');
-  var listDetail = name.concat(' on ', date);
-  listEl.addClass('list-group-item').text(listDetail);
-  listEl.appendTo(skillsListEl);
+	var listEl = $("<li>");
+	var listDetail = name.concat(" on ", date);
+	listEl.addClass("list-group-item").text(listDetail);
+	listEl.appendTo(skillsListEl);
 };
 
 var handleFormSubmit = function (event) {
-  event.preventDefault();
+	event.preventDefault();
 
-  var nameInput = nameInputEl.val();
-  var dateInput = dateInputEl.val();
+	var nameInput = nameInputEl.val();
+	var dateInput = dateInputEl.val();
 
-  if (!nameInput || !dateInput) {
-    console.log('You need to fill out the form!');
-    return;
-  }
+	if (!nameInput || !dateInput) {
+		console.log("You need to fill out the form!");
+		return;
+	}
 
-  printSkills(nameInput, dateInput);
+	printSkills(nameInput, dateInput);
 
-  nameInputEl.val('');
-  dateInputEl.val('');
+	nameInputEl.val("");
+	dateInputEl.val("");
 };
 
-formEl.on('submit', handleFormSubmit);
+formEl.on("submit", handleFormSubmit);
 
 // Add Autocomplete widget here
 //
+$(function () {
+	var availableTags = [
+		"ActionScript",
+		"AppleScript",
+		"Asp",
+		"BASIC",
+		"C",
+		"C++",
+		"Clojure",
+		"COBOL",
+		"ColdFusion",
+		"Erlang",
+		"Fortran",
+		"Groovy",
+		"Haskell",
+		"Java",
+		"JavaScript",
+		"Lisp",
+		"Perl",
+		"PHP",
+		"Python",
+		"Ruby",
+		"Scala",
+		"Scheme",
+		"JQuery",
+		"BootStrap",
+		"HTML",
+		"Things",
+		"Stuff",
+	];
+	$("#skill-name").autocomplete({
+		source: availableTags,
+	});
+});
 
 // Add Datepicker widget here
 //
+
+$(function () {
+	$("#datepicker").datepicker();
+});

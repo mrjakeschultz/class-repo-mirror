@@ -2,7 +2,7 @@
 
 // var rootEl = document.getElementById("root");
 var rootEl = $('#root');
-
+console.log(rootEl)
 // var titleEl = document.createElement("h1");
 var titleEl = $('<h1>');
 
