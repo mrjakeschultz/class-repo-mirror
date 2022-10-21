@@ -1,6 +1,9 @@
 // Use Moment.js to format the following variables:
 // 1. What is today's date in the following format: Jan 1st, 1999?
 var today = moment();
+// Javascript Date https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+console.log(new Date())
+console.log(today)
 $("#1a").text(today.format("MMM Do, YYYY"));
 
 // 2. What is the day of the week today?
@@ -15,6 +18,7 @@ $("#3a").text(reformatDate);
 var weekNum = today.format("w");
 var takeOut;
 // Check odd, then assign boolean
+// Basically saying if not even because 0 will evaluate to false and any even number will be 0 here.
 if(weekNum % 2) {
   takeOut = true;
 } else {

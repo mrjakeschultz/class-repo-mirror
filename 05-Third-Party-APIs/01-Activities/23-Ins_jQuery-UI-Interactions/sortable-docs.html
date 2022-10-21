@@ -11,7 +11,7 @@
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
     <!-- Change to our own custom stylesheet -->
-    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <!-- Add this <style> code to the custom stylesheet -->
     <style>
       #sortable {
@@ -32,15 +32,7 @@
         margin-left: -1.3em;
       }
     </style>
-    <!-- Move the jQuery <script> tags to the bottom -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-      $(function () {
-        $('#sortable').sortable();
-        $('#sortable').disableSelection();
-      });
-    </script>
+
   </head>
   <body>
     <!-- Change body content -->
@@ -69,4 +61,11 @@
     </ul>
   </body>
   <!-- See index.html file for the resulting code -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $('#sortable').sortable();
+      });
+    </script>
 </html>
